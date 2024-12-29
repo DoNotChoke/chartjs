@@ -10,6 +10,7 @@ import './App.css';
 Chart.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const centerTextPlugin = {
+
     id: 'centerText',
     afterDraw: (chart) => {
         const { ctx, chartArea: { width, height } } = chart;
@@ -50,7 +51,7 @@ const centerTextPlugin = {
             if (currentLine) {
                 lines.push(currentLine);
             }
-            
+
             if (lines.length > maxLines) {
                 const truncatedLines = lines.slice(0, maxLines);
                 const lastLine = truncatedLines[maxLines - 1];
